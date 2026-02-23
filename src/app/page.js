@@ -55,11 +55,10 @@ const PROJECTS = [
     slug: "ai-cctv",
     title: "AI CCTV Retail Security",
     description:
-      "Computer vision system for small retailers — detects theft and incidents in real-time, retrainable on new data for custom use cases.",
-    techStack: ["Python", "OpenCV", "YOLO", "TensorFlow"],
+      "Deep learning system for real-time shoplifting detection in retail environments.",
+    techStack: ["Python", "PyTorch", "VideoMAE", "YOLOv8", "Streamlit", "OpenCV"],
     github: "https://github.com/ShashankInData/AI-CCTV-Retail-Security",
     live: null,
-    comingSoon: true,
   },
 ];
 
@@ -243,11 +242,10 @@ function Navbar({ activeId }) {
             <a
               key={l.id}
               href={`#${l.id}`}
-              className={`relative px-3 py-1.5 font-heading text-sm transition-colors ${
-                activeId === l.id
+              className={`relative px-3 py-1.5 font-heading text-sm transition-colors ${activeId === l.id
                   ? "text-accent-gold"
                   : "text-text-secondary hover:text-text-primary"
-              }`}
+                }`}
             >
               {l.label}
               {activeId === l.id && (
@@ -283,11 +281,10 @@ function Navbar({ activeId }) {
               key={l.id}
               href={`#${l.id}`}
               onClick={() => setMobileOpen(false)}
-              className={`block py-2 font-heading text-sm ${
-                activeId === l.id
+              className={`block py-2 font-heading text-sm ${activeId === l.id
                   ? "text-accent-gold"
                   : "text-text-secondary"
-              }`}
+                }`}
             >
               {l.label}
             </a>
@@ -518,11 +515,10 @@ function Experience() {
             >
               {/* Timeline dot */}
               <span
-                className={`absolute -left-[calc(2rem+5px)] top-1.5 h-3 w-3 rounded-full border-2 border-accent-gold ${
-                  idx === 0
+                className={`absolute -left-[calc(2rem+5px)] top-1.5 h-3 w-3 rounded-full border-2 border-accent-gold ${idx === 0
                     ? "bg-accent-gold shadow-[0_0_8px_rgba(240,192,64,0.6)]"
                     : "bg-bg-primary"
-                }`}
+                  }`}
               />
 
               <h3 className="font-heading text-lg font-semibold text-text-primary">
